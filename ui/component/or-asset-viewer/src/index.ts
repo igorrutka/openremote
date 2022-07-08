@@ -488,7 +488,7 @@ function getPanelContent(id: string, assetInfo: AssetInfo, hostElement: LitEleme
             content = html`
                 <div id="fileupload"> 
                     <or-mwc-input outlined .label="${i18next.t("selectFile")}" .type="${InputType.BUTTON}" @or-mwc-input-changed="${() => hostElement.shadowRoot!.getElementById('fileupload-elem')!.click()}">
-                        <input id="fileupload-elem" name="configfile" type="file" accept=".json, .knxproj, .vlp" @change="${() => updateFileName()}"/>
+                        <input id="fileupload-elem" name="configfile" type="file" accept=".json, .knxproj, .vlp, .csv" @change="${() => updateFileName()}"/>
                     </or-mwc-input>
                     <or-mwc-input id="filename-elem" .type="${InputType.TEXT}" disabled></or-mwc-input>
                     <or-mwc-input id="fileupload-btn" icon="upload" .type="${InputType.BUTTON}" @or-mwc-input-changed="${() => fileToBase64()}" disabled></or-mwc-input>
